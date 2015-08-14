@@ -1,0 +1,15 @@
+<projectDescription>
+  <name>gt-opengis</name>
+  <comment>Standard interfaces implemented throughout the library.</comment>
+  <projects>
+    <project>gt-sample-data</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

@@ -1,0 +1,22 @@
+<projectDescription>
+  <name>gt-xsd-core</name>
+  <comment>Schema based xml parsing. This module contains tools for creating 
+    bindings from xml types to java types. Schema modelling is based 
+    on Eclipse XSD.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-graph</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

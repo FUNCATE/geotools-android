@@ -1,0 +1,35 @@
+<projectDescription>
+  <name>gt-xml</name>
+  <comment>XML Parser based on the XDO design.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-coverage</project>
+    <project>gt-data</project>
+    <project>gt-epsg-hsql</project>
+    <project>gt-graph</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-sample-data</project>
+    <project>gt-xsd-core</project>
+    <project>gt-xsd-fes</project>
+    <project>gt-xsd-filter</project>
+    <project>gt-xsd-gml2</project>
+    <project>gt-xsd-gml3</project>
+    <project>gt-xsd-ows</project>
+    <project>gt-xsd-wfs</project>
+    <project>net.opengis.fes</project>
+    <project>net.opengis.ows</project>
+    <project>net.opengis.wfs</project>
+    <project>org.w3.xlink</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

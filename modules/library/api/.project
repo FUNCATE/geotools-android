@@ -1,0 +1,24 @@
+<projectDescription>
+  <name>gt-api</name>
+  <comment>The api module contains the GeoTools public interfaces that are used by
+    other GeoTools modules (and GeoTools applications). Where possible
+    we make use of standard interfaces from projects such as GeoAPI
+    and JTS.
+    
+    The formal GeoTools public api consists of this module, geoapi and jts.
+    If you find yourself using implementations specific classes (such as
+    new ShapefileDataStore(...) chances are you are doing it wrong.</comment>
+  <projects>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

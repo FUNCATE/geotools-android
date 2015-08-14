@@ -1,0 +1,27 @@
+<projectDescription>
+  <name>gt-validation</name>
+  <comment>Validation module (and validator batch tool) for use with geotools2.
+    This library has been ported to geotools2 as part of the VWFS project
+    sponcered by Geo Innovations.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-data</project>
+    <project>gt-graph</project>
+    <project>gt-jdbc</project>
+    <project>gt-jdbc-postgis</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-sample-data</project>
+    <project>gt-shapefile</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

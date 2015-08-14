@@ -1,0 +1,26 @@
+<projectDescription>
+  <name>net.opengis.wcs</name>
+  <comment>Web Coverage Service Schema EMF Model</comment>
+  <projects>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>net.opengis.ows</project>
+    <project>org.w3.xlink</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.pde.ManifestBuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.pde.SchemaBuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+    <nature>org.eclipse.pde.PluginNature</nature>
+  </natures>
+</projectDescription>

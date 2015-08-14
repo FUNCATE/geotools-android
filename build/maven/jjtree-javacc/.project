@@ -1,0 +1,17 @@
+<projectDescription>
+  <name>jjtree-javacc</name>
+  <comment>This Maven plugin run &apos;jjtree&apos; on a set of .jjt files found in the source
+    directory, which generates a set of .jj files. Next, this plugin executes
+    &apos;javacc&apos; on those .jj files in order to generate the .java files. All
+    generated files are stored in a &apos;target/generated-sources&apos; directory and
+    are part of the compilation phase.</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

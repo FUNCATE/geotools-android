@@ -1,0 +1,18 @@
+<projectDescription>
+  <name>gt-epsg-postgresql</name>
+  <comment>Connection to an EPSG postgreSQL database.
+    This database should be built by the user from the SQL scripts delivered by EPSG.</comment>
+  <projects>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

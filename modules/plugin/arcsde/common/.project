@@ -1,0 +1,16 @@
+<projectDescription>
+  <name>gt-arcsde-common</name>
+  <comment>ArcSDE support classes, including session pooling and JNDI support.</comment>
+  <projects>
+    <project>gt-sample-data</project>
+    <project>gt-sde-dummy</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

@@ -1,0 +1,25 @@
+<projectDescription>
+  <name>gt-graph</name>
+  <comment>Graph classes that builds and walk networks based on Feature relationships.
+    The original graph package has been developed using the JUMP Feature API.
+    Its intension is to be able to aid automated skeletonization of water bodies
+    by computing directionality of generated skeletons. The work for the 
+    original JUMP based library has been funded by the BC Proventional 
+    Government department of BMGS. This library has been ported to geotools2 as 
+    part of the VWFS project sponcered by Geo Innovations.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

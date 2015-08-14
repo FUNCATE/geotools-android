@@ -1,0 +1,21 @@
+<projectDescription>
+  <name>gt-xsd-wms</name>
+  <comment>WMS XML support for Geotools.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-graph</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-xsd-core</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

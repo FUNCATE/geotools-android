@@ -1,0 +1,32 @@
+<projectDescription>
+  <name>gt-svg</name>
+  <comment>Plugin allowing gt-render to draw scalar vector graphic symbols.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-coverage</project>
+    <project>gt-cql</project>
+    <project>gt-data</project>
+    <project>gt-epsg-hsql</project>
+    <project>gt-graph</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-property</project>
+    <project>gt-referencing</project>
+    <project>gt-render</project>
+    <project>gt-sample-data</project>
+    <project>gt-xsd-core</project>
+    <project>gt-xsd-filter</project>
+    <project>gt-xsd-gml2</project>
+    <project>gt-xsd-gml3</project>
+    <project>gt-xsd-sld</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

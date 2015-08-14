@@ -1,0 +1,23 @@
+<projectDescription>
+  <name>net.opengis.wps</name>
+  <comment>Web Processing Service Schema EMF Model</comment>
+  <projects>
+    <project>net.opengis.ows</project>
+    <project>org.w3.xlink</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.pde.ManifestBuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.pde.SchemaBuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+    <nature>org.eclipse.pde.PluginNature</nature>
+  </natures>
+</projectDescription>

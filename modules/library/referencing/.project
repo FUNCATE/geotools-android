@@ -1,0 +1,18 @@
+<projectDescription>
+  <name>gt-referencing</name>
+  <comment>Contains implementations of Coordinate Reference Systems (CRS),
+    conversion and transformation services.</comment>
+  <projects>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-sample-data</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

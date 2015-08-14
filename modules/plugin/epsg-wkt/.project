@@ -1,0 +1,25 @@
+<projectDescription>
+  <name>gt-epsg-wkt</name>
+  <comment>EPSG and AUTO authority factories are defined for data.crs.CRSService.
+    These codes are used to provide CoordinateRegerenceSystem for GCE and
+    DataStore implementations that do not define their own native definition.
+  
+    Contains a Property file based CoordinateSystemAuthority (the property file 
+    is too large to be included in the main geotools release). This class will 
+    need to be ported to the new GeoAPI CoordinateReferenceSystem interfaces.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-sample-data</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

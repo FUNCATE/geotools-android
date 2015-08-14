@@ -1,0 +1,14 @@
+<projectDescription>
+  <name>javadoc</name>
+  <comment>Defines custom taglet for &apos;source&apos; and &apos;tutorial&apos; javadoc tags and for the 
+    &apos;code&apos; javadoc inline tag.</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

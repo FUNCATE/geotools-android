@@ -1,0 +1,24 @@
+<projectDescription>
+  <name>gt-epsg-extension</name>
+  <comment>Contains extra CRS defined by ESRI (and other parties) in the EPSG namespace.
+    Those CRS are not defined in the official ESPG database, but are used widely
+    enough to warant an optional plugin in Geotools. This plugin do not contains
+    any definition already found in the official EPSG database - it is not a
+    replacement for epsg-hsql or epsg-postgresql. One of the above
+    plugins (at user choice) should be in the classpath.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-epsg-hsql</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

@@ -1,0 +1,19 @@
+<projectDescription>
+  <name>gt-epsg-hsql</name>
+  <comment>Connection to an embedded EPSG database in HSQL format.
+    This database is built from the SQL scripts delivered by EPSG.</comment>
+  <projects>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-sample-data</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

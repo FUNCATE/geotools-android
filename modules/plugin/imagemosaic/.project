@@ -1,0 +1,32 @@
+<projectDescription>
+  <name>gt-imagemosaic</name>
+  <comment>Datasource created to read a mosaic of georeferenced images or geotiff, jp2k, ...</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-coverage</project>
+    <project>gt-cql</project>
+    <project>gt-data</project>
+    <project>gt-epsg-hsql</project>
+    <project>gt-geotiff</project>
+    <project>gt-image</project>
+    <project>gt-jdbc</project>
+    <project>gt-jdbc-h2</project>
+    <project>gt-jdbc-oracle</project>
+    <project>gt-jdbc-postgis</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-sample-data</project>
+    <project>gt-shapefile</project>
+    <project>gt-transform</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

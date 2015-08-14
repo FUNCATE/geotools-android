@@ -1,0 +1,29 @@
+<projectDescription>
+  <name>gt-wms</name>
+  <comment>An OGC Web Map Server client implementation that can be used directly or as 
+    through the GridCoverageExchange API. Direct usage is recommended, as the
+    GridCoverageExchange access for WMS is not well tested and is complicated to
+    use. It supports WMS versions 1.0.0, 1.1.0, 1.1.1, and 1.3.0.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-coverage</project>
+    <project>gt-cql</project>
+    <project>gt-epsg-extension</project>
+    <project>gt-epsg-hsql</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-render</project>
+    <project>gt-sample-data</project>
+    <project>gt-xml</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

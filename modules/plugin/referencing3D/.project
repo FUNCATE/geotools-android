@@ -1,0 +1,21 @@
+<projectDescription>
+  <name>gt-referencing3D</name>
+  <comment>Transforms coordinates from &quot;heights above the ellipsoid&quot; to &quot;heights above
+    the geoid&quot;. This module provides the algorithms from an Earth Gravitational 
+    Model as a MathTransform implementation. Installing the JAR on the classpath 
+    should be suffisient for making vertical transformations available to an 
+    application like any other transforms.</comment>
+  <projects>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

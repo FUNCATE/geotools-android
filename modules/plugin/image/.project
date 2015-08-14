@@ -1,0 +1,23 @@
+<projectDescription>
+  <name>gt-image</name>
+  <comment>Grid coverage reader for image georeferenced by a world file.
+    File format consists of consisting of a plain image and a &quot;sidecar&quot; world file to georeference
+    the image, a and projection file file to indicate the coordinate reference system used.</comment>
+  <projects>
+    <project>gt-api</project>
+    <project>gt-coverage</project>
+    <project>gt-main</project>
+    <project>gt-metadata</project>
+    <project>gt-opengis</project>
+    <project>gt-referencing</project>
+    <project>gt-sample-data</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>
