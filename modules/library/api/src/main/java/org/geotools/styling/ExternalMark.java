@@ -1,6 +1,6 @@
 package org.geotools.styling;
 
-import javax.swing.Icon;
+import java.io.InputStream;
 
 import org.opengis.metadata.citation.OnLineResource;
 
@@ -38,7 +38,7 @@ public interface ExternalMark extends org.opengis.style.ExternalMark {
      *
      * @return InlineContent or <code>null</code>
      */
-    Icon getInlineContent();
+    InputStream getInlineContent();
 
     /**
      * Icon to use for inline content.
@@ -47,12 +47,12 @@ public interface ExternalMark extends org.opengis.style.ExternalMark {
      * 
      * @param inline
      */
-    void setInlineContent(Icon inline);
+    void setInlineContent(InputStream inline);
 
     /**
      * @deprecated use {@link #setInlineContent(Icon)}
      */
-    void getInlineContent(Icon inline);
+    void getInlineContent(InputStream inline);
     
     /**
      * Mime type of the onlineResource/InlineContent

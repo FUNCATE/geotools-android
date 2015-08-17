@@ -16,12 +16,11 @@
  */
 package org.geotools.styling.builder;
 
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.swing.Icon;
 
 import org.geotools.styling.ExternalGraphic;
 import org.opengis.metadata.citation.OnLineResource;
@@ -33,7 +32,7 @@ import org.opengis.style.ColorReplacement;
  * @source $URL$
  */
 public class ExternalGraphicBuilder extends AbstractStyleBuilder<ExternalGraphic> {
-    private Icon inline;
+    private InputStream inline;
 
     private String format;
 
@@ -61,11 +60,11 @@ public class ExternalGraphicBuilder extends AbstractStyleBuilder<ExternalGraphic
         return this;
     }
 
-    public Icon inline() {
+    public InputStream inline() {
         return inline;
     }
 
-    public ExternalGraphicBuilder inline(Icon icon) {
+    public ExternalGraphicBuilder inline(InputStream icon) {
         this.inline = icon;
         return this;
     }

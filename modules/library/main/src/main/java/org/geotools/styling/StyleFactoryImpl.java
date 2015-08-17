@@ -18,6 +18,7 @@
  */
 package org.geotools.styling;
 
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -25,7 +26,6 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.measure.unit.Unit;
-import javax.swing.Icon;
 
 import org.geotools.factory.CommonFactoryFinder;
 import org.geotools.factory.GeoTools;
@@ -467,7 +467,7 @@ public class StyleFactoryImpl extends AbstractStyleFactory
     }
 
     @Override
-    public ExternalGraphic createExternalGraphic(Icon inlineContent, String format) {
+    public ExternalGraphic createExternalGraphic(InputStream inlineContent, String format) {
         ExternalGraphicImpl extg = new ExternalGraphicImpl();
         extg.setInlineContent(inlineContent);
         extg.setFormat(format);
@@ -834,7 +834,7 @@ public class StyleFactoryImpl extends AbstractStyleFactory
         return delegate.displacement(dx, dy);
     }
 
-    public ExternalGraphic externalGraphic(Icon inline,
+    public ExternalGraphic externalGraphic(InputStream inline,
             Collection<ColorReplacement> replacements) {
         return delegate.externalGraphic(inline, replacements);
     }
@@ -844,7 +844,7 @@ public class StyleFactoryImpl extends AbstractStyleFactory
         return delegate.externalGraphic(resource, format, replacements);
     }
 
-    public ExternalMarkImpl externalMark(Icon inline) {
+    public ExternalMarkImpl externalMark(InputStream inline) {
         return delegate.externalMark(inline);
     }
 

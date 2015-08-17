@@ -166,7 +166,7 @@ public class FilterParsingUtils {
 
     static Filter lookupExtendedOperator(Name opName, List<Expression> expressions, 
         org.opengis.filter.FilterFactory factory) {
-        FunctionFinder finder = new FunctionFinder(null);
+        FunctionFinder finder = new FunctionFinder();
         Function f = finder.findFunction(opName.getLocalPart(), expressions);
         return factory.equal(f, factory.literal(true), true);
     }

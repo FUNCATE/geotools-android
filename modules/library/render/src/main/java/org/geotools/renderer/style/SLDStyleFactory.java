@@ -22,6 +22,7 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Composite;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Paint;
 import java.awt.RenderingHints;
 import java.awt.Shape;
@@ -31,6 +32,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.List;
@@ -39,6 +41,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -1302,7 +1305,16 @@ public class SLDStyleFactory {
 		if (eg == null)
 			return null;
 
-        Icon inlineContent = eg.getInlineContent();
+		Image image=null;
+		try {
+			image = ImageIO.read(eg.getInlineContent());
+			return null;
+		} catch (IOException e1) {
+			LOGGER.log(Level.INFO, "Failed reading inline content",
+					e1);
+		}
+		
+        Icon inlineContent = new ImageIcon(image);
         if (inlineContent != null) {
             return inlineContent;
         }

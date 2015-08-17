@@ -16,12 +16,10 @@
  */
 package org.geotools.styling;
 
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -33,8 +31,6 @@ import java.util.logging.Level;
 import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.geotools.data.Base64;
@@ -614,13 +610,13 @@ public class SLDParser {
             return ftc;
     }
 
-    private static Icon parseIcon(String content) throws IOException {
+    private static InputStream parseIcon(String content) throws IOException {
         byte[] bytes = Base64.decode(content);
-        BufferedImage image = ImageIO.read(new ByteArrayInputStream(bytes));
+        InputStream image = new ByteArrayInputStream(bytes);
         if (image == null) {
             throw new IOException("invalid image content");
         }
-        return new ImageIcon(image);
+        return image;
     }
 
     protected RemoteOWS parseRemoteOWS(Node root) {
@@ -1844,7 +1840,7 @@ public class SLDParser {
 
         ExternalGraphic extgraph;
         if (content != null) {
-            Icon icon = null;
+            InputStream icon = null;
             if (content.length() > 0) {
                 try {
                     icon = parseIcon(content);
@@ -1858,7 +1854,6 @@ public class SLDParser {
 
             if (icon == null) {
                 LOGGER.warning("returning empty icon");
-                icon = EmptyIcon.INSTANCE;
             }
 
             extgraph = factory.createExternalGraphic(icon, format);
@@ -2549,10 +2544,10 @@ public class SLDParser {
         
     }
 
-    private static class EmptyIcon implements Icon {
+/*    private static class EmptyIcon implements Icon {
         public static final EmptyIcon INSTANCE = new EmptyIcon();
         @Override public void paintIcon(Component c, Graphics g, int x, int y) { }
         @Override public int getIconWidth() { return 1; }
         @Override public int getIconHeight() { return 1; }
-    }
+    }*/
 }

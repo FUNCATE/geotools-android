@@ -16,6 +16,7 @@
  */
 package org.geotools.styling;
 
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Collection;
 import java.util.List;
@@ -23,7 +24,6 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.measure.unit.Unit;
-import javax.swing.Icon;
 
 import org.geotools.factory.Factory;
 import org.opengis.feature.type.Name;
@@ -49,7 +49,7 @@ public interface StyleFactory extends Factory, org.opengis.style.StyleFactory {
 
     public ExternalGraphic createExternalGraphic(String uri, String format);
 
-    public ExternalGraphic createExternalGraphic(Icon inlineContent, String format);
+    public ExternalGraphic createExternalGraphic(InputStream inlineContent, String format);
 
     public AnchorPoint createAnchorPoint(Expression x, Expression y);
 
@@ -401,7 +401,7 @@ public interface StyleFactory extends Factory, org.opengis.style.StyleFactory {
      * @param replacements
      * @return
      */
-    ExternalGraphic externalGraphic(Icon inline,
+    ExternalGraphic externalGraphic(InputStream inline,
             Collection<org.opengis.style.ColorReplacement> replacements);
 
     /**
@@ -419,7 +419,7 @@ public interface StyleFactory extends Factory, org.opengis.style.StyleFactory {
      * @param inline
      * @return
      */
-    ExternalMark externalMark(Icon inline);
+    ExternalMark externalMark(InputStream inline);
 
     /**
      * 

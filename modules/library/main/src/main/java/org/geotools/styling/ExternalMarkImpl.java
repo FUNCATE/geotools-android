@@ -17,7 +17,7 @@
 package org.geotools.styling;
 
 
-import javax.swing.Icon;
+import java.io.InputStream;
 
 import org.opengis.metadata.citation.OnLineResource;
 import org.opengis.style.StyleVisitor;
@@ -34,14 +34,14 @@ import org.opengis.style.StyleVisitor;
 public class ExternalMarkImpl implements org.geotools.styling.ExternalMark {
 
     private OnLineResource onlineResource;
-    private Icon inlineContent;
+    private InputStream inlineContent;
     private int index;
     private String format;
 
     public ExternalMarkImpl() {        
     }
     
-    public ExternalMarkImpl(Icon icon) {
+    public ExternalMarkImpl(InputStream icon) {
         this.inlineContent = icon;
         this.index = -1;
         this.onlineResource = null;
@@ -59,7 +59,7 @@ public class ExternalMarkImpl implements org.geotools.styling.ExternalMark {
         return format;
     }
 
-    public Icon getInlineContent() {
+    public InputStream getInlineContent() {
         return inlineContent;
     }
 
@@ -75,11 +75,11 @@ public class ExternalMarkImpl implements org.geotools.styling.ExternalMark {
         return visitor.visit( this, extraData );
     }
 
-    public void setInlineContent(Icon inline) {
+    public void setInlineContent(InputStream inline) {
         this.inlineContent = inline;
     }
 
-    public void getInlineContent(Icon inline) {
+    public void getInlineContent(InputStream inline) {
         setInlineContent(inline);
     }
     

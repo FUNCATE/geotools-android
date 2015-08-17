@@ -16,6 +16,7 @@
  */
 package org.geotools.styling.visitor;
 
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -72,7 +73,6 @@ import org.opengis.filter.FilterFactory2;
 import org.opengis.filter.expression.Expression;
 import org.opengis.style.Description;
 
-import javax.swing.Icon;
 
 /**
  * Creates a deep copy of a Style, this class is *NOT THREAD SAFE*.
@@ -843,7 +843,7 @@ public class DuplicatingStyleVisitor implements StyleVisitor {
             
         }
         String format = exgr.getFormat();
-        Icon inlineContent = exgr.getInlineContent();
+        InputStream inlineContent = exgr.getInlineContent();
         ExternalGraphic copy;
         if (inlineContent != null) {
             copy = sf.createExternalGraphic(inlineContent, format);

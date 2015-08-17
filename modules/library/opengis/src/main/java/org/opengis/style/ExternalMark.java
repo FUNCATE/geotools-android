@@ -9,7 +9,8 @@
  */
 package org.opengis.style;
 
-import javax.swing.Icon;
+import java.io.InputStream;
+
 import org.opengis.annotation.Extension;
 import org.opengis.annotation.XmlElement;
 import org.opengis.metadata.citation.OnLineResource;
@@ -50,7 +51,7 @@ public interface ExternalMark {
      * @return InlineContent or null
      */
     @XmlElement("InlineContent")
-    Icon getInlineContent();
+    InputStream getInlineContent();
 
     /**
      * Returns the mime type of the onlineResource/InlineContent

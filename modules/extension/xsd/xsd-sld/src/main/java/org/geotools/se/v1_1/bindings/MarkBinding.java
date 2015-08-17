@@ -16,6 +16,7 @@
  */
 package org.geotools.se.v1_1.bindings;
 
+import java.io.InputStream;
 import java.net.URI;
 
 import org.geotools.metadata.iso.citation.OnLineResourceImpl;
@@ -113,7 +114,7 @@ public class MarkBinding extends SLDMarkBinding {
                     new OnLineResourceImpl((URI)node.getChildValue("OnlineResource")), format, markIndex);
             }
             else if (node.hasChild("InlineContent")) {
-                Icon ic = (Icon) node.getChildValue("InlineContent");
+                InputStream ic = (InputStream) node.getChildValue("InlineContent");
                 emark = styleFactory.externalMark(ic);
                 emark.setFormat((String) node.getChildValue("Format"));
             }

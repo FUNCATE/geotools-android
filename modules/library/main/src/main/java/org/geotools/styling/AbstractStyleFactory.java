@@ -17,13 +17,12 @@
 package org.geotools.styling;
 
 import java.awt.RenderingHints;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Map;
 
 import org.opengis.filter.expression.Expression;
-
-import javax.swing.Icon;
 
 /**
  * Abstract base class for implementing style factories.
@@ -41,7 +40,7 @@ public abstract class AbstractStyleFactory implements StyleFactory {
     public abstract ExternalGraphic createExternalGraphic(String uri,
         String format);
 
-    public abstract ExternalGraphic createExternalGraphic(Icon inlineContent, String format);
+    public abstract ExternalGraphic createExternalGraphic(InputStream inlineContent, String format);
 
     public abstract AnchorPoint createAnchorPoint(Expression x, Expression y);
 

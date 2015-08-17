@@ -16,7 +16,7 @@
  */
 package org.geotools.styling.builder;
 
-import javax.swing.Icon;
+import java.io.InputStream;
 
 import org.geotools.styling.ExternalMark;
 import org.opengis.metadata.citation.OnLineResource;
@@ -27,7 +27,7 @@ import org.opengis.metadata.citation.OnLineResource;
  * @source $URL$
  */
 public class ExternalMarkBuilder extends AbstractStyleBuilder<ExternalMark> {
-    private Icon inline;
+    private InputStream inline;
 
     private String format;
 
@@ -44,7 +44,7 @@ public class ExternalMarkBuilder extends AbstractStyleBuilder<ExternalMark> {
         reset();
     }
 
-    public ExternalMarkBuilder inline(Icon icon) {
+    public ExternalMarkBuilder inline(InputStream icon) {
         this.unset = false;
         this.inline = icon;
         return this;

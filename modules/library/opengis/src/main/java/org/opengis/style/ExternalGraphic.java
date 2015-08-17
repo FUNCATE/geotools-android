@@ -9,8 +9,9 @@
  */
 package org.opengis.style;
 
+import java.io.InputStream;
 import java.util.Collection;
-import javax.swing.Icon;
+
 import org.opengis.annotation.Extension;
 import org.opengis.annotation.XmlElement;
 import org.opengis.metadata.citation.OnLineResource;
@@ -48,7 +49,7 @@ public interface ExternalGraphic extends GraphicalSymbol {
      * @return
      */
     @XmlElement("InlineContent")
-    Icon getInlineContent();
+    InputStream getInlineContent();
 
     /**
      * Returns the mime type of the onlineResource/InlineContent

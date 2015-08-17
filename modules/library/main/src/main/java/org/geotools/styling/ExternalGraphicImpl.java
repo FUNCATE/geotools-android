@@ -16,6 +16,7 @@
  */
 package org.geotools.styling;
 
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -25,8 +26,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-
-import javax.swing.Icon;
 
 import org.geotools.metadata.iso.citation.OnLineResourceImpl;
 import org.geotools.util.Utilities;
@@ -49,7 +48,7 @@ import org.opengis.util.Cloneable;
 public class ExternalGraphicImpl implements ExternalGraphic, Symbol, Cloneable {
     /** The logger for the default core module. */
     //private static final java.util.logging.Logger LOGGER = org.geotools.util.logging.Logging.getLogger("org.geotools.core");
-    private Icon inlineContent;
+    private InputStream inlineContent;
     private OnLineResource online;
     
     
@@ -64,7 +63,7 @@ public class ExternalGraphicImpl implements ExternalGraphic, Symbol, Cloneable {
         this(null,null,null);
     }
     
-    public ExternalGraphicImpl(Icon icon,Collection<ColorReplacement> replaces, OnLineResource source){
+    public ExternalGraphicImpl(InputStream icon,Collection<ColorReplacement> replaces, OnLineResource source){
         this.inlineContent = icon;
         if(replaces == null){
             colorReplacements = new TreeSet<ColorReplacement>();
@@ -239,11 +238,11 @@ public class ExternalGraphicImpl implements ExternalGraphic, Symbol, Cloneable {
         this.online = online;
     }
 
-    public Icon getInlineContent() {
+    public InputStream getInlineContent() {
         return inlineContent;
     }
     
-    public void setInlineContent(Icon inlineContent) {
+    public void setInlineContent(InputStream inlineContent) {
         this.inlineContent = inlineContent;
     }
 

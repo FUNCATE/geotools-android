@@ -9,13 +9,13 @@
  */
 package org.opengis.style;
 
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import javax.measure.unit.Unit;
-import javax.swing.Icon;
 
 import org.opengis.feature.type.Name;
 import org.opengis.filter.Filter;
@@ -140,7 +140,7 @@ public interface StyleFactory {
      * @param replacements
      * @return
      */
-    ExternalGraphic externalGraphic(Icon inline,
+    ExternalGraphic externalGraphic(InputStream inline,
             Collection<ColorReplacement> replacements);
 
     /**
@@ -158,7 +158,7 @@ public interface StyleFactory {
      * @param inline
      * @return
      */
-    ExternalMark externalMark(Icon inline);
+    ExternalMark externalMark(InputStream inline);
 
     /**
      * 

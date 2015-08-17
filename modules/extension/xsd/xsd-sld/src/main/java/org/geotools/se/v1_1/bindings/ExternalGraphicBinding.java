@@ -16,6 +16,8 @@
  */
 package org.geotools.se.v1_1.bindings;
 
+import java.io.InputStream;
+
 import org.geotools.se.v1_1.SE;
 import org.geotools.sld.bindings.SLDExternalGraphicBinding;
 import org.geotools.styling.ExternalGraphic;
@@ -23,7 +25,6 @@ import org.geotools.styling.StyleFactory;
 import org.geotools.xml.ElementInstance;
 import org.geotools.xml.Node;
 
-import javax.swing.Icon;
 import javax.xml.namespace.QName;
 
 /**
@@ -91,7 +92,7 @@ public class ExternalGraphicBinding extends SLDExternalGraphicBinding {
         ExternalGraphic g;
         if (node.hasChild("InlineContent")) {
             String format = (String) node.getChildValue("Format");
-            Icon icon = (Icon) node.getChildValue("InlineContent");
+            InputStream icon = (InputStream) node.getChildValue("InlineContent");
             g = styleFactory.createExternalGraphic(icon, format);
         } else {
             g = (ExternalGraphic) super.parse(instance, node, value);

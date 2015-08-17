@@ -16,11 +16,15 @@
  */
 package org.geotools.renderer.lite;
 
+import java.awt.Image;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.imageio.ImageIO;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 import org.geotools.filter.ConstantExpression;
 import org.geotools.filter.FilterAttributeExtractor;
@@ -335,9 +339,21 @@ public class MetaBufferEstimator extends FilterAttributeExtractor implements Sty
             for (GraphicalSymbol gs : gr.graphicalSymbols()) {
                 if(gs instanceof ExternalGraphic) {
                     ExternalGraphic eg = (ExternalGraphic) gs;
-                    Icon icon = null;
+            	
+                    Icon icon =null;
                     if(eg.getInlineContent() != null) {
-                        icon = eg.getInlineContent();
+                    	Image image=null;
+                		try {
+                			image = ImageIO.read(eg.getInlineContent());
+                			estimateAccurate = false;
+                			return;
+                		} catch (IOException e1) {
+                			LOGGER.log(Level.INFO, "Failed reading inline content",
+                					e1);
+                		}
+                		
+                        icon = new ImageIcon(image);
+                        
                     } else {
                         String location = eg.getLocation().toExternalForm();
                         // expand embedded cql expression

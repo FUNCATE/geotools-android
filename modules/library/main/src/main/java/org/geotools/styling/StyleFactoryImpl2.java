@@ -18,6 +18,7 @@
  */
 package org.geotools.styling;
 
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,6 @@ import java.util.Set;
 
 import javax.measure.quantity.Length;
 import javax.measure.unit.Unit;
-import javax.swing.Icon;
 
 import org.geotools.factory.CommonFactoryFinder;
 import org.geotools.factory.GeoTools;
@@ -129,7 +129,7 @@ public class StyleFactoryImpl2 implements org.opengis.style.StyleFactory {
         return new DisplacementImpl( dx, dy );
     }
 
-    public ExternalGraphic externalGraphic(Icon inline,
+    public ExternalGraphic externalGraphic(InputStream inline,
             Collection<ColorReplacement> replacements) {
         ExternalGraphic externalGraphic = new ExternalGraphicImpl( inline, replacements, null );
         return externalGraphic;
@@ -142,7 +142,7 @@ public class StyleFactoryImpl2 implements org.opengis.style.StyleFactory {
         return externalGraphic;
     }
 
-    public ExternalMarkImpl externalMark(Icon inline) {
+    public ExternalMarkImpl externalMark(InputStream inline) {
         return new ExternalMarkImpl( inline );
     }
 
